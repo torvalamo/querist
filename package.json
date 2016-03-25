@@ -1,0 +1,23 @@
+{
+  "name": "querist",
+  "version": "0.1.0",
+  "description":  "Intuitive SQL query builder and homogenous database interface.",
+  "main": "index.js",
+  "repository": "torvalamo/querist",
+  "keywords": [
+    "sql",
+    "sequel",
+    "query",
+    "builder",
+    "sqlite3",
+    "sqlite"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "node-assign": "1.1.1",
+    "sqlite3": ">=3.1.1"
+  }
+}
