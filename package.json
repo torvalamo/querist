@@ -1,6 +1,6 @@
 {
   "name": "querist",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description":  "Intuitive SQL query builder and homogenous database interface.",
   "main": "index.js",
   "repository": "torvalamo/querist",

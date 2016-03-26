@@ -2,7 +2,7 @@
 
 module.exports = function(opts) {
   opts = opts || {};
-  opts.engine = require('./lib/db/' + (opts.engine || 'sqlite3'))(opts);
+  opts.engine = new (require('./lib/db/' + (opts.engine || 'sqlite3')))(opts);
   return opts.engine;
 };
 
