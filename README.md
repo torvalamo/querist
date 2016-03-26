@@ -107,7 +107,7 @@ Does not actually communicate with the engine, it just buffers the params and bi
 
 Return all rows found by executing the statement, or an empty array.
 
-The second (raw) version requires you to supply all parameters IN ORDER as separate arguments, since they have not been bound to an interface by `statement.bind`. Not also that the callback signature is not the same.
+The second (raw) version requires you to supply all parameters IN ORDER as separate arguments, since they have not been bound to an interface by `statement.bind`. Note also that the callback signature is not the same.
 
 #### interface.each(callback(row), [complete])
 #### statement.each([params...], [callback(err, row)}, [complete]])
@@ -116,18 +116,18 @@ Return each row found by the query. The callback is called once for every row fo
 
 When every row has been handled, the `complete` callback is called.
 
-The second (raw) version requires you to supply all parameters IN ORDER as separate arguments, since they have not been bound to an interface by `statement.bind`. Not also that the callback signature is not the same.
+The second (raw) version requires you to supply all parameters IN ORDER as separate arguments, since they have not been bound to an interface by `statement.bind`. Note also that the callback signature is not the same.
 
 #### interface.get(callback(row))
 #### statement.get([params...], [callback(err, row)])
 
 Return only the first row found by the query, or `undefined` if nothing was found.
 
-The second (raw) version requires you to supply all parameters IN ORDER as separate arguments, since they have not been bound to an interface by `statement.bind`. Not also that the callback signature is not the same.
+The second (raw) version requires you to supply all parameters IN ORDER as separate arguments, since they have not been bound to an interface by `statement.bind`. Note also that the callback signature is not the same.
 
 #### interface.run([callback(lastID, changes)])
 #### statement.run([params...], [callback(err)])
 
 Run the query and call callback with EITHER `lastID` OR `changes`, reflecting the last inserted auto_increment or the number of affected rows, respectively. N/A values are `undefined`.
 
-The second (raw) version requires you to supply all parameters IN ORDER as separate arguments, since they have not been bound to an interface by `statement.bind`. Not also that the callback signature is not the same. In the raw callback, `this` contains `this.lastID` or `this.changes`.
+The second (raw) version requires you to supply all parameters IN ORDER as separate arguments, since they have not been bound to an interface by `statement.bind`. Note also that the callback signature is not the same. In the raw callback, `this` contains `this.lastID` or `this.changes`.
