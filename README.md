@@ -8,7 +8,6 @@ Intuitive SQL query builder and homogenous database interface.
 
 Currently only supports sqlite3 (mysql & postgres planned).
 
-
 ## Use
 
     npm install querist
@@ -82,9 +81,15 @@ Create (and return) a prepared statement, optionally save it with a name for eas
         // or .where('id', db.param('id')) shorthand for .eq()
     );
 
-#### db.statement(name)
+#### db.statement(name, [params])
 
-Return the statement saved by the given name.
+Return the statement saved by the given name. If you supply params, this function is diverted to `statement.bind()` and returns an interface.
+
+If you supply `params` as `null` explicitly, it will also return an interface, with no bindings. Useful for having prepared statements that are executed often but doesn't require params.
+
+    db.prepare('static', db.select().from('test').orderDesc('importance'))
+    
+    db.statement('static', null).all((rows) => {...}) // look ma, no .bind()!
 
 ### Statements
 
